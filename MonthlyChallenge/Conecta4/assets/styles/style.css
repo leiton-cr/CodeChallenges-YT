@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-size: clamp(14px, 2vw, 18px);
+    margin: 0;
+    background-color: rgb(228, 228, 228);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accented-txt{
+    color: rgb(233, 77, 4);
+}
+
+.board {
+    border-radius: 1.5em;
+    width: clamp(270px, 90vw, 600px);
+    height: clamp(250px, 85vw, 550px);
+    background-color: rgb(233, 77, 4);
+    padding: 1em;
+    display: grid;
+    gap: 3%;
+    grid-template-columns: repeat(7, 1fr);
+    box-shadow: 5px 5px 20px #00000075;
+}
+
+.game-title{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Chango', cursive;
+    color: rgb(34, 34, 34);
+    font-size: 5vh;
+    margin-bottom: 1em;
+}
+
+.score-board{
+    width: clamp(270px, 90vw, 600px);
+    font-family: sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between; 
+    font-family: sans-serif;
+    color: rgb(63, 63, 63);
+    font-size: .8em;
+    padding: 1rem;
+    align-items: center;
+    position: relative;
+}
+
+.board-dot {
+    box-shadow: inset 10px -10px 10px #00000045;
+    background-color: rgb(172, 60, 8);
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: filter 150ms, background-color 500ms;
+}
+
+.board-dot:hover {
+    filter: brightness(.8)
+}
+
+.board-dot.p1 {
+    background-color: rgb(13, 116, 44);
+}
+
+.board-dot.p2 {
+    background-color: blue;
+}
+
+.p1-icon{
+    color: rgb(13, 116, 44);
+}
+
+.p2-icon{
+    color: blue;
+}
+
+
+
+.btn{
+    cursor: pointer;
+    width: 13ch;
+    padding: 1em;
+    border: none;
+    outline: none;
+    border-radius: .5em;
+    box-shadow: 0px 0px 5px #0000003d;
+    transition: transform 250ms, background-color 250ms, color 250ms;
+    display: flex;
+    justify-content: center;
+    gap: .2em;
+}
+
+.btn:hover{
+    transform: scale(1.2);
+    background-color: rgb(233, 77, 4);
+    color: white;
+}
+
+.btn:active{
+    transform: scale(1.1);
+}
+
+.button-board{
+    display: flex;
+    gap: 2em;
+    margin-top: 1em;
+}
+
+.player-selector{
+    position: absolute;
+    font-size: 1.5em;
+    top: 4rem;
+    left: 4.5rem;
+}
+
+.player-selector.p1{
+    animation: move-left 1s forwards ;
+}
+
+.player-selector.p2{
+   animation: move-rigth 1s forwards;
+}
+
+.four-icon{
+    display: flex;
+    gap: .5em;
+    justify-content: center;
+}
+
+@keyframes move-left{
+    0%{
+        left: 4.5rem; 
+    }
+
+    100%{
+        left: calc(100% - 4rem);
+    }
+}
+
+@keyframes move-rigth{
+    0%{
+        left: calc(100% - 4rem);
+    }
+
+    100%{
+        left: 4.5rem; 
+        
+    }
+}

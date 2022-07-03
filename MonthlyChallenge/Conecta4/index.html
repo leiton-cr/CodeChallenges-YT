@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect 4</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a6ee538727.js" crossorigin="anonymous"></script>
+</head>
+
+<link rel="stylesheet" href="./assets/styles/style.css">
+
+<body>
+   <div class="game-container">
+    <h1 class="game-title"><span>Connect</span> <span class="accented-txt">4</span></h1>
+
+    <section class="board" data-board></section>
+    <div class="score-board">
+        <h2><i class="fa-brands fa-bilibili p1-icon"></i> Player 1</h2>
+        <span> <span data-score></span> | <span data-score></span> </span>
+        <h2>Player 2 <i class="fa-brands fa-bilibili p2-icon"></i></h2>
+        <i class="fa-regular fa-hand-pointer player-selector"></i>
+    </div>
+
+    <section class="button-board">
+        <button id="clearBtn" class="btn"><i class="fa-solid fa-broom"></i>Clear</button>
+        <button id="resetBtn" class="btn"><i class="fa-solid fa-rotate-left"></i>Restart</button>
+    </section>
+   </div>
+
+</body>
+
+<script src="./assets/scripts/script.js" type="module"></script>
+
+</html>
